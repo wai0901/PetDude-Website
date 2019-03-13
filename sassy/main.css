@@ -1,0 +1,654 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html body {
+  margin: 0;
+  padding: 0;
+  background-color: #dadada;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html body .container {
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+html body .container .navBar {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  bottom: 0vh;
+  color: #646464;
+  overflow: hidden;
+}
+
+html body .container .navBar * {
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+html body .container .navBar .sideBar .menuIcon {
+  position: absolute;
+  visibility: hidden;
+  top: 45px;
+  left: 210px;
+  z-index: 3;
+}
+
+html body .container .navBar .sideBar .closeIcon {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 750px) {
+  html body .container .navBar .sideBar .menuIcon {
+    visibility: visible;
+  }
+  html body .container .navBar .sideBar .menuIcon a {
+    color: #646464;
+  }
+  html body .container .navBar .sideBar .menuIconShow {
+    left: 200px;
+  }
+}
+
+html body .container .navBar .sideBar .mainMenu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  float: left;
+  position: relative;
+  top: 50px;
+  z-index: 2;
+}
+
+html body .container .navBar .sideBar .mainMenu .sideBtn {
+  font-family: 'Montserrat', sans-serif;
+  float: left;
+}
+
+html body .container .navBar .sideBar .mainMenu .sideBtn .mainBtn {
+  color: #646464;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 4vw;
+  border-right: 2px solid #b4b4b4;
+}
+
+html body .container .navBar .sideBar .mainMenu .sideBtn .mainBtnClicked {
+  color: #5b96a3;
+}
+
+html body .container .navBar .sideBar .mainMenu .sideBtn i {
+  margin: 0 5px 0 0;
+}
+
+@media screen and (max-width: 1200px) {
+  html body .container .navBar .sideBar .mainMenu .sideBtn .mainBtn {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  html body .container .navBar .sideBar .mainMenu .sideBtn .mainBtn {
+    padding: 0 3vw;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  html body .container .navBar .sideBar .mainMenu .sideBtn .mainBtn {
+    padding: 0 2vw;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  html body .container .navBar .sideBar .mainMenu .sideBtn .mainBtn {
+    visibility: hidden;
+  }
+}
+
+html body .container .navBar .sideBar .selectionNav {
+  width: 100%;
+  position: absolute;
+}
+
+html body .container .navBar .sideBar .selectionNav .brandAll {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 0 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  z-index: 2;
+}
+
+html body .container .navBar .sideBar .selectionNav .brandAll .menuChoice {
+  float: left;
+  list-style-type: none;
+}
+
+html body .container .navBar .sideBar .selectionNav .brandAll .menuChoice .menuChoiceA {
+  padding-right: 2vw;
+  font-size: 0.9rem;
+  color: #646464;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+html body .container .navBar .sideBar .selectionNav .brandAll .menuChoice a:hover {
+  color: #5b96a3;
+}
+
+html body .container .navBar .sideBar .selectionNav .brandAll .menuChoice .mainBtnClicked {
+  color: #5b96a3;
+}
+
+html body .container .navBar .sideBar .selectionNav .brandHide {
+  top: 50px;
+  left: 100px;
+}
+
+html body .container .navBar .sideBar .selectionNav .petHide {
+  top: 50px;
+  left: 300px;
+}
+
+html body .container .navBar .sideBar .selectionNav .serviceHide {
+  top: 50px;
+  left: 300px;
+}
+
+html body .container .navBar .sideBar .selectionNav .btnsShow {
+  visibility: visible;
+  opacity: 1;
+  top: 80px;
+}
+
+@media screen and (max-width: 750px) {
+  html body .container .navBar .sideBar .selectionNav {
+    position: relative;
+    float: left;
+    margin-left: -50vw;
+  }
+  html body .container .navBar .sideBar .selectionNav .brandAll {
+    position: absolute;
+    width: 0 50vw;
+    display: block;
+    padding: 0 40px;
+    margin: 0;
+    background-color: rgba(13, 37, 39, 0.9);
+    border-bottom: none;
+    z-index: 2;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    visibility: hidden;
+  }
+  html body .container .navBar .sideBar .selectionNav .brandAll .menuChoice {
+    margin: 0 10px;
+    padding: 28px 10px;
+    list-style-type: none;
+    float: none;
+  }
+  html body .container .navBar .sideBar .selectionNav .brandAll .menuChoice .menuChoiceA {
+    color: #dadada;
+    text-decoration: none;
+  }
+  html body .container .navBar .sideBar .selectionNav .brandAll .menuChoice a:hover {
+    color: #5b96a3;
+  }
+  html body .container .navBar .sideBar .selectionNav .brandHide {
+    top: 105px;
+    left: -20px;
+  }
+  html body .container .navBar .sideBar .selectionNav .petHide {
+    top: 190px;
+    left: -20px;
+  }
+  html body .container .navBar .sideBar .selectionNav .serviceHide {
+    top: 276px;
+    left: -20px;
+  }
+  html body .container .navBar .sideBar .selectionNav .btnsShow {
+    left: 150px;
+    visibility: visible;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  html body .container .navBar .sideBar .mainMenu {
+    position: absolute;
+    height: 100vh;
+    margin: 0;
+    padding: 20px 0;
+    top: 0px;
+    background-color: #0d2527;
+    left: -180px;
+    z-index: 3;
+    visibility: hidden;
+  }
+  html body .container .navBar .sideBar .mainMenu .sideBtn {
+    float: none;
+    left: -180px;
+    position: relative;
+    padding: 30px 22px;
+    overflow: hidden;
+    border-bottom: 1px solid #31494d;
+  }
+  html body .container .navBar .sideBar .mainMenu .sideBtn .mainBtn {
+    visibility: visible;
+    color: #dadada;
+    font-size: 1.3rem;
+    border-right: none;
+    font-weight: bold;
+  }
+  html body .container .navBar .sideBar .mainMenu .sideBtn .mainBtnClicked {
+    color: #5b96a3;
+  }
+  html body .container .navBar .sideBar .mainMenu .sideBtn i {
+    display: none;
+  }
+  html body .container .navBar .sideBar .mainMenu .sideBtn:hover {
+    background-color: #31494d;
+  }
+  html body .container .navBar .sideBar .mainMenuShow {
+    left: 0px;
+    visibility: visible;
+  }
+  html body .container .navBar .sideBar .mainMenuShow .sideBtn {
+    left: 0px;
+  }
+}
+
+html body .container .navBar .shoppingCart {
+  position: absolute;
+  margin: 45px 0 0 40vw;
+  list-style-type: none;
+  z-index: 2;
+}
+
+html body .container .navBar .shoppingCart .fa, html body .container .navBar .shoppingCart .fas {
+  text-decoration: none;
+  color: #646464;
+  font-size: 1.7rem;
+}
+
+html body .container .navBar .shoppingCart .cartItems {
+  position: absolute;
+  left: 37px;
+  top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  padding: auto;
+  height: 30px;
+  width: 35px;
+  border-radius: 15px;
+  background-color: #bebebe;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1150px) {
+  html body .container .navBar .shoppingCart {
+    margin: 50px 0 0 40vw;
+  }
+  html body .container .navBar .shoppingCart .fa, html body .container .navBar .shoppingCart .fas {
+    font-size: 1.4rem;
+  }
+  html body .container .navBar .shoppingCart .cartItems {
+    height: 25px;
+    width: 30px;
+    left: 33px;
+    top: -1px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  html body .container .navBar .shoppingCart {
+    margin: 50px 0 0 35vw;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  html body .container .navBar .shoppingCart {
+    margin: 50px 0 0 30vw;
+  }
+}
+
+html body .container .navBar .logo {
+  padding: 0;
+  margin-left: 50%;
+  margin-right: 50%;
+  position: absolute;
+  top: -500px;
+  right: -440px;
+  font-size: 10rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  z-index: -1;
+}
+
+html body .container .navBar .logo .petColor {
+  color: #5b96a3;
+}
+
+html body .container .navBar .logo .letterL {
+  font-size: 13rem;
+}
+
+html body .container .navBar .logoShow {
+  top: -20px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+@media screen and (max-width: 1000px) {
+  html body .container .navBar .logo {
+    font-size: 9rem;
+    right: -400px;
+  }
+  html body .container .navBar .logo .letterL {
+    font-size: 11rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  html body .container .navBar .logo {
+    top: 30px;
+    font-size: 7.5rem;
+    right: -330px;
+  }
+  html body .container .navBar .logo .letterL {
+    font-size: 9rem;
+  }
+  html body .container .navBar .logoShow {
+    top: 30px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  html body .container .navBar .logo {
+    top: 0px;
+    font-size: 5.5rem;
+    right: -230px;
+  }
+  html body .container .navBar .logo .letterL {
+    font-size: 6.2rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  html body .container .navBar .logo {
+    top: 40px;
+    font-size: 3.8rem;
+    right: -160px;
+  }
+  html body .container .navBar .logo .letterL {
+    font-size: 4.4rem;
+  }
+}
+
+html body .container .enter {
+  position: absolute;
+  top: 40vh;
+  margin-left: 50%;
+  margin-right: 50%;
+  right: -20px;
+  color: #646464;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html body .container .enter .bone {
+  position: absolute;
+  font-size: 1.3rem;
+  top: -10px;
+  left: -80px;
+  -webkit-animation: bone 1.5s infinite;
+          animation: bone 1.5s infinite;
+  cursor: pointer;
+  z-index: 3;
+}
+
+html body .container .enter .bone:hover {
+  font-size: 1.5rem;
+}
+
+html body .container .enter .bone:active {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
+html body .container .enter p {
+  position: absolute;
+  top: 90px;
+  left: -58px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+html body .container .enterShow {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  html body .container .enter {
+    display: none;
+  }
+}
+
+html body .container .content {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+html body .container .content * {
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+html body .container .content .dog {
+  position: absolute;
+  right: -350px;
+  top: 70vh;
+  margin-left: 50%;
+  margin-right: 50%;
+  z-index: -1;
+}
+
+html body .container .content .dog img {
+  width: 650px;
+}
+
+html body .container .content .dogShow {
+  top: 300px;
+}
+
+@media screen and (max-width: 850px) {
+  html body .container .content .dog {
+    right: -300px;
+    top: 30vh;
+  }
+  html body .container .content .dog img {
+    width: 550px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  html body .container .content .dog {
+    right: -250px;
+    top: 40vh;
+  }
+  html body .container .content .dog img {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  html body .container .content .dog {
+    right: -200px;
+    top: 45vh;
+  }
+  html body .container .content .dog img {
+    width: 350px;
+  }
+}
+
+html body .container .content .socIcon {
+  position: absolute;
+  top: 90vh;
+  left: 10vw;
+  list-style-type: none;
+}
+
+html body .container .content .socIcon a {
+  margin-right: 1vh;
+  text-decoration: none;
+  height: 30px;
+}
+
+html body .container .content form {
+  position: absolute;
+  width: 300px;
+  display: block;
+  top: 85vh;
+  margin-left: 75%;
+  margin-right: 25%;
+  color: #646464;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+html body .container .content form input {
+  padding: 0.7em;
+  width: 270px;
+  border-style: none;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1300px) {
+  html body .container .content .socIcon {
+    left: 7vw;
+  }
+  html body .container .content .socIcon a {
+    font-size: 0.8rem;
+  }
+  html body .container .content form {
+    margin-left: 70%;
+    margin-right: 30%;
+  }
+  html body .container .content form input {
+    padding: 0.6em;
+    width: 230px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  html body .container .content .socIcon {
+    left: 6vw;
+  }
+  html body .container .content form {
+    margin-left: 72%;
+    margin-right: 28%;
+    font-size: 0.8rem;
+  }
+  html body .container .content form input {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  html body .container .content form {
+    margin-left: 65%;
+    margin-right: 35%;
+    color: black;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  html body .container .content .socIcon {
+    top: 93vh;
+    left: 29vw;
+  }
+  html body .container .content .socIcon a {
+    margin-right: 2.5vh;
+    font-size: 1.2rem;
+    color: #353535;
+  }
+  html body .container .content form {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  html body .container .content .socIcon {
+    top: 93vh;
+    left: 0;
+    margin: 0 17%;
+  }
+  html body .container .content .socIcon a {
+    margin-right: 2.5vh;
+    font-size: 1.2rem;
+    color: #353535;
+  }
+}
+
+@-webkit-keyframes bone {
+  0% {
+    font-size: 1.2rem;
+  }
+  50% {
+    font-size: 1.3rem;
+  }
+  100% {
+    font-size: 1.2rem;
+  }
+}
+
+@keyframes bone {
+  0% {
+    font-size: 1.2rem;
+  }
+  50% {
+    font-size: 1.3rem;
+  }
+  100% {
+    font-size: 1.2rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

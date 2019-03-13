@@ -1,0 +1,851 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html body {
+  margin: 0;
+  padding: 0;
+  background-color: #dadada;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html body .container {
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+html body .container .navBar {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  bottom: 0vh;
+  color: #646464;
+  overflow: hidden;
+  z-index: 3;
+}
+
+html body .container .navBar * {
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+html body .container .navBar .sideBar .menuIcon {
+  position: absolute;
+  visibility: hidden;
+  top: 45px;
+  left: 210px;
+}
+
+html body .container .navBar .sideBar .closeIcon {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 750px) {
+  html body .container .navBar .sideBar .menuIcon {
+    visibility: visible;
+  }
+  html body .container .navBar .sideBar .menuIcon a {
+    color: #646464;
+  }
+  html body .container .navBar .sideBar .menuIconShow {
+    left: 200px;
+  }
+}
+
+html body .container .navBar .sideBar .mainMenu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  float: left;
+  position: relative;
+  top: 50px;
+  z-index: 2;
+}
+
+html body .container .navBar .sideBar .mainMenu .sideBtn {
+  font-family: 'Montserrat', sans-serif;
+  float: left;
+}
+
+html body .container .navBar .sideBar .mainMenu .sideBtn .mainBtn {
+  color: #646464;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 4vw;
+  border-right: 2px solid #b4b4b4;
+}
+
+html body .container .navBar .sideBar .mainMenu .sideBtn .mainBtnClicked {
+  color: #5b96a3;
+}
+
+html body .container .navBar .sideBar .mainMenu .sideBtn i {
+  margin: 0 5px 0 0;
+}
+
+@media screen and (max-width: 1200px) {
+  html body .container .navBar .sideBar .mainMenu .sideBtn .mainBtn {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  html body .container .navBar .sideBar .mainMenu .sideBtn .mainBtn {
+    padding: 0 3vw;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  html body .container .navBar .sideBar .mainMenu .sideBtn .mainBtn {
+    padding: 0 2vw;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  html body .container .navBar .sideBar .mainMenu .sideBtn .mainBtn {
+    visibility: hidden;
+  }
+}
+
+html body .container .navBar .sideBar .mainMenu .service {
+  font-weight: bold;
+}
+
+html body .container .navBar .sideBar .selectionNav {
+  width: 100%;
+  position: absolute;
+}
+
+html body .container .navBar .sideBar .selectionNav .brandAll {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 0 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  z-index: 2;
+}
+
+html body .container .navBar .sideBar .selectionNav .brandAll .menuChoice {
+  float: left;
+  list-style-type: none;
+}
+
+html body .container .navBar .sideBar .selectionNav .brandAll .menuChoice .menuChoiceA {
+  padding-right: 2vw;
+  font-size: 1rem;
+  color: #646464;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+html body .container .navBar .sideBar .selectionNav .brandAll .menuChoice a:hover {
+  color: #5b96a3;
+}
+
+html body .container .navBar .sideBar .selectionNav .brandAll .menuChoice .mainBtnClicked {
+  color: #5b96a3;
+}
+
+html body .container .navBar .sideBar .selectionNav .brandHide {
+  top: 50px;
+  left: 100px;
+}
+
+html body .container .navBar .sideBar .selectionNav .petHide {
+  top: 50px;
+  left: 300px;
+}
+
+html body .container .navBar .sideBar .selectionNav .serviceHide {
+  top: 50px;
+  left: 300px;
+}
+
+html body .container .navBar .sideBar .selectionNav .btnsShow {
+  visibility: visible;
+  opacity: 1;
+  top: 80px;
+}
+
+@media screen and (max-width: 1150px) {
+  html body .container .navBar .sideBar .selectionNav .brandHide {
+    top: 80px;
+    left: -20px;
+  }
+  html body .container .navBar .sideBar .selectionNav .petHide {
+    top: 80px;
+    left: 200px;
+  }
+  html body .container .navBar .sideBar .selectionNav .serviceHide {
+    top: 80px;
+    left: 200px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  html body .container .navBar .sideBar .selectionNav .petHide {
+    top: 80px;
+    left: 150px;
+  }
+  html body .container .navBar .sideBar .selectionNav .serviceHide {
+    top: 80px;
+    left: 150px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  html body .container .navBar .sideBar .selectionNav .petHide {
+    top: 80px;
+    left: 120px;
+  }
+  html body .container .navBar .sideBar .selectionNav .serviceHide {
+    top: 80px;
+    left: 100px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  html body .container .navBar .sideBar .selectionNav .petHide {
+    top: 80px;
+    left: 100px;
+  }
+  html body .container .navBar .sideBar .selectionNav .serviceHide {
+    top: 80px;
+    left: 50px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  html body .container .navBar .sideBar .selectionNav .petHide {
+    top: 80px;
+    left: 80px;
+  }
+  html body .container .navBar .sideBar .selectionNav .serviceHide {
+    top: 80px;
+    left: 0px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  html body .container .navBar .sideBar .selectionNav {
+    position: relative;
+    float: left;
+    margin-left: -50vw;
+  }
+  html body .container .navBar .sideBar .selectionNav .brandAll {
+    position: absolute;
+    width: 0 50vw;
+    display: block;
+    padding: 0 40px;
+    margin: 0;
+    background-color: rgba(13, 37, 39, 0.9);
+    border-bottom: none;
+    z-index: 2;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    visibility: hidden;
+  }
+  html body .container .navBar .sideBar .selectionNav .brandAll .menuChoice {
+    margin: 0 10px;
+    padding: 28px 10px;
+    list-style-type: none;
+    float: none;
+  }
+  html body .container .navBar .sideBar .selectionNav .brandAll .menuChoice .menuChoiceA {
+    color: #dadada;
+    text-decoration: none;
+  }
+  html body .container .navBar .sideBar .selectionNav .brandAll .menuChoice a:hover {
+    color: #5b96a3;
+  }
+  html body .container .navBar .sideBar .selectionNav .brandHide {
+    top: 105px;
+    left: -20px;
+  }
+  html body .container .navBar .sideBar .selectionNav .petHide {
+    top: 190px;
+    left: -20px;
+  }
+  html body .container .navBar .sideBar .selectionNav .serviceHide {
+    top: 276px;
+    left: -20px;
+  }
+  html body .container .navBar .sideBar .selectionNav .btnsShow {
+    left: 150px;
+    visibility: visible;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  html body .container .navBar .sideBar .mainMenu {
+    position: absolute;
+    height: 100vh;
+    margin: 0;
+    padding: 20px 0;
+    top: 0px;
+    background-color: #0d2527;
+    left: -180px;
+    z-index: 3;
+    visibility: hidden;
+  }
+  html body .container .navBar .sideBar .mainMenu .sideBtn {
+    float: none;
+    left: -180px;
+    position: relative;
+    padding: 30px 22px;
+    overflow: hidden;
+    border-bottom: 1px solid #31494d;
+  }
+  html body .container .navBar .sideBar .mainMenu .sideBtn .mainBtn {
+    visibility: visible;
+    color: #dadada;
+    font-size: 1.3rem;
+    border-right: none;
+    font-weight: bold;
+  }
+  html body .container .navBar .sideBar .mainMenu .sideBtn .mainBtnClicked {
+    color: #5b96a3;
+  }
+  html body .container .navBar .sideBar .mainMenu .sideBtn i {
+    display: none;
+  }
+  html body .container .navBar .sideBar .mainMenu .sideBtn:hover {
+    background-color: #31494d;
+  }
+  html body .container .navBar .sideBar .mainMenuShow {
+    left: 0px;
+    visibility: visible;
+  }
+  html body .container .navBar .sideBar .mainMenuShow .sideBtn {
+    left: 0px;
+  }
+}
+
+html body .container .navBar .shoppingCart {
+  position: absolute;
+  margin: 45px 0 0 40vw;
+  list-style-type: none;
+  z-index: 2;
+}
+
+html body .container .navBar .shoppingCart .fa, html body .container .navBar .shoppingCart .fas {
+  text-decoration: none;
+  color: #646464;
+  font-size: 1.7rem;
+}
+
+html body .container .navBar .shoppingCart .cartItems {
+  position: absolute;
+  left: 37px;
+  top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  padding: auto;
+  height: 30px;
+  width: 35px;
+  border-radius: 15px;
+  background-color: #bebebe;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1150px) {
+  html body .container .navBar .shoppingCart {
+    margin: 50px 0 0 40vw;
+  }
+  html body .container .navBar .shoppingCart .fa, html body .container .navBar .shoppingCart .fas {
+    font-size: 1.4rem;
+  }
+  html body .container .navBar .shoppingCart .cartItems {
+    height: 25px;
+    width: 30px;
+    left: 33px;
+    top: -1px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  html body .container .navBar .shoppingCart {
+    margin: 50px 0 0 35vw;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  html body .container .navBar .shoppingCart {
+    margin: 50px 0 0 30vw;
+  }
+}
+
+html body .container .navBar .logo {
+  padding: 0;
+  position: absolute;
+  top: 15px;
+  left: 5vw;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  z-index: -1;
+}
+
+html body .container .navBar .logo .petColor {
+  color: #5b96a3;
+}
+
+html body .container .navBar .logo .letterL {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 1250px) {
+  html body .container .navBar .logo {
+    top: 26px;
+    font-size: 1.2rem;
+  }
+  html body .container .navBar .logo .letterL {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  html body .container .navBar .logo {
+    top: 31px;
+    font-size: 1rem;
+  }
+  html body .container .navBar .logo .letterL {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  html body .container .navBar .logo {
+    display: none;
+  }
+}
+
+html body .container .serviceContainer {
+  position: relative;
+  top: 150px;
+}
+
+html body .container .serviceContainer .serHeader ul {
+  margin: 0 20vw;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  max-width: 1000px;
+}
+
+html body .container .serviceContainer .serHeader ul li {
+  position: relative;
+  height: 250px;
+  margin: 5px 5px;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  list-style-type: none;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+html body .container .serviceContainer .serHeader ul li i {
+  display: block;
+  margin: 2vh 0;
+  color: #646464;
+}
+
+html body .container .serviceContainer .serHeader ul li a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #646464;
+  z-index: 2;
+}
+
+html body .container .serviceContainer .serHeader ul li img {
+  position: absolute;
+  bottom: 0;
+  left: -5px;
+  width: 14vw;
+  max-width: 200px;
+  z-index: 1;
+}
+
+@media screen and (max-width: 1350px) {
+  html body .container .serviceContainer .serHeader ul {
+    margin: 0 13vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  html body .container .serviceContainer .serHeader ul {
+    margin: 0 11vw;
+  }
+  html body .container .serviceContainer .serHeader ul li img {
+    width: 15vw;
+  }
+  html body .container .serviceContainer .serHeader ul li a {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  html body .container .serviceContainer .serHeader ul {
+    margin: 0 8vw;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  html body .container .serviceContainer .serHeader ul {
+    margin: 0 5vw;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  html body .container .serviceContainer .serHeader ul {
+    margin: 0 13vw;
+    padding: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    max-width: 1100px;
+  }
+  html body .container .serviceContainer .serHeader ul li {
+    height: 60px;
+    margin: 8px 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body .container .serviceContainer .serHeader ul li i {
+    margin: 0 5vw;
+  }
+  html body .container .serviceContainer .serHeader ul li img {
+    left: 55vw;
+    width: 12vw;
+  }
+  html body .container .serviceContainer .serHeader ul li a {
+    font-size: 1.2rem;
+  }
+}
+
+html body .container .serviceContainer .serContent {
+  position: relative;
+  margin-top: 30px;
+}
+
+html body .container .serviceContainer .serContent ul {
+  margin: 0 20vw;
+  padding: 0;
+  max-width: 1000px;
+  background-color: #bebebe;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% 35% 40%;
+      grid-template-columns: 25% 35% 40%;
+      grid-template-areas: "one one two" "three four five";
+}
+
+html body .container .serviceContainer .serContent ul .serList {
+  display: inline-block;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+html body .container .serviceContainer .serContent ul .serList img {
+  height: 300px;
+  overflow: hidden;
+}
+
+html body .container .serviceContainer .serContent ul .one {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: one;
+  width: 100%;
+}
+
+html body .container .serviceContainer .serContent ul .two {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: two;
+  position: relative;
+  top: 5vh;
+  font-size: 1rem;
+  padding: 2vw;
+}
+
+html body .container .serviceContainer .serContent ul .three {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: three;
+  position: relative;
+  top: 5vh;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 2vw;
+}
+
+html body .container .serviceContainer .serContent ul .four {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: four;
+}
+
+html body .container .serviceContainer .serContent ul .five {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: five;
+}
+
+@media screen and (max-width: 1550px) {
+  html body .container .serviceContainer .serContent ul .five img {
+    position: relative;
+    right: 2vw;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  html body .container .serviceContainer .serContent ul {
+    margin: 0 13vw;
+  }
+  html body .container .serviceContainer .serContent ul .five img {
+    position: relative;
+    right: 2vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  html body .container .serviceContainer .serContent ul {
+    margin: 0 11vw;
+  }
+  html body .container .serviceContainer .serContent ul .five img {
+    position: relative;
+    right: 2vw;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  html body .container .serviceContainer .serContent ul {
+    margin: 0 8vw;
+  }
+  html body .container .serviceContainer .serContent ul .five img {
+    position: relative;
+    right: 2vw;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  html body .container .serviceContainer .serContent ul {
+    -ms-grid-columns: 20% 35% 45%;
+        grid-template-columns: 20% 35% 45%;
+    margin: 0 5vw;
+  }
+  html body .container .serviceContainer .serContent ul .five img {
+    position: relative;
+    right: 2vw;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  html body .container .serviceContainer .serContent ul {
+    -ms-grid-columns: 20% 30% 50%;
+        grid-template-columns: 20% 30% 50%;
+    margin: 0 5vw;
+  }
+  html body .container .serviceContainer .serContent ul .one img {
+    position: relative;
+    right: 3vw;
+  }
+  html body .container .serviceContainer .serContent ul .four img {
+    position: relative;
+    right: 9vw;
+  }
+  html body .container .serviceContainer .serContent ul .five img {
+    position: relative;
+    right: 2vw;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  html body .container .serviceContainer .serContent ul {
+    display: none;
+  }
+}
+
+html body .container .content {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+}
+
+html body .container .content * {
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+html body .container .content .socIcon {
+  position: absolute;
+  bottom: 10vh;
+  left: 10vw;
+  list-style-type: none;
+}
+
+html body .container .content .socIcon a {
+  margin-right: 1vh;
+  text-decoration: none;
+  height: 30px;
+}
+
+html body .container .content form {
+  position: absolute;
+  width: 300px;
+  display: block;
+  bottom: 10vh;
+  margin-left: 75%;
+  margin-right: 25%;
+  color: #646464;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+html body .container .content form input {
+  padding: 0.7em;
+  width: 270px;
+  border-style: none;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1300px) {
+  html body .container .content .socIcon {
+    left: 7vw;
+  }
+  html body .container .content .socIcon a {
+    font-size: 0.8rem;
+  }
+  html body .container .content form {
+    margin-left: 70%;
+    margin-right: 30%;
+  }
+  html body .container .content form input {
+    padding: 0.6em;
+    width: 230px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  html body .container .content .socIcon {
+    left: 6vw;
+  }
+  html body .container .content form {
+    margin-left: 72%;
+    margin-right: 28%;
+    font-size: 0.8rem;
+  }
+  html body .container .content form input {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  html body .container .content form {
+    margin-left: 65%;
+    margin-right: 35%;
+    color: black;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  html body .container .content .socIcon {
+    top: 93vh;
+    left: 29vw;
+  }
+  html body .container .content .socIcon a {
+    margin-right: 2.5vh;
+    font-size: 1.2rem;
+    color: #353535;
+  }
+  html body .container .content form {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  html body .container .content .socIcon {
+    top: 93vh;
+    left: 0;
+    margin: 0 17%;
+  }
+  html body .container .content .socIcon a {
+    margin-right: 2.5vh;
+    font-size: 1.2rem;
+    color: #353535;
+  }
+}
+
+@-webkit-keyframes bone {
+  0% {
+    font-size: 1.2rem;
+  }
+  50% {
+    font-size: 1.3rem;
+  }
+  100% {
+    font-size: 1.2rem;
+  }
+}
+
+@keyframes bone {
+  0% {
+    font-size: 1.2rem;
+  }
+  50% {
+    font-size: 1.3rem;
+  }
+  100% {
+    font-size: 1.2rem;
+  }
+}
+/*# sourceMappingURL=service.css.map */

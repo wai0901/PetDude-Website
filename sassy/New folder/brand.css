@@ -1,0 +1,337 @@
+html body {
+  margin: 0;
+  padding: 0;
+  background-color: #dadada;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html body .container {
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+html body .container .navBar {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  color: #646464;
+  overflow: hidden;
+}
+
+html body .container .navBar ul {
+  margin: 0 0 0 0;
+  padding: 0;
+  list-style-type: none;
+  float: left;
+  position: relative;
+  top: 50px;
+  left: 35px;
+  z-index: 2;
+}
+
+html body .container .navBar ul li {
+  font-family: 'Montserrat', sans-serif;
+  float: left;
+  margin: 0 4vw 0 0;
+}
+
+html body .container .navBar ul li .mainBtn {
+  color: #646464;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-right: 4vw;
+  border-right: 2px solid #b4b4b4;
+}
+
+html body .container .navBar ul li .mainBtnClicked {
+  color: #5b96a3;
+}
+
+html body .container .navBar ul li i {
+  margin: 0 5px 0 0;
+}
+
+html body .container .navBar .selectionNav {
+  width: 100%;
+  position: absolute;
+}
+
+html body .container .navBar .selectionNav .brandHide {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 50%;
+  margin-right: 50%;
+  top: 50px;
+  left: -350px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+html body .container .navBar .selectionNav .brandHide li {
+  float: left;
+}
+
+html body .container .navBar .selectionNav .brandHide li a {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #646464;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+html body .container .navBar .selectionNav .brandHide li a:hover {
+  color: #5b96a3;
+}
+
+html body .container .navBar .selectionNav .petHide {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 50%;
+  margin-right: 50%;
+  top: 50px;
+  left: -260px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+html body .container .navBar .selectionNav .petHide li {
+  float: left;
+}
+
+html body .container .navBar .selectionNav .petHide li a {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #646464;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+html body .container .navBar .selectionNav .petHide li a:hover {
+  color: #5b96a3;
+}
+
+html body .container .navBar .selectionNav .petHide li a:hover::before {
+  background: url(../img/pawn.svg);
+}
+
+html body .container .navBar .selectionNav .serviceHide {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 50%;
+  margin-right: 50%;
+  top: 50px;
+  left: -300px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+html body .container .navBar .selectionNav .serviceHide li {
+  float: left;
+}
+
+html body .container .navBar .selectionNav .serviceHide li a {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #646464;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+html body .container .navBar .selectionNav .serviceHide li a:hover {
+  color: #5b96a3;
+}
+
+html body .container .navBar .selectionNav .btnsShow {
+  visibility: visible;
+  opacity: 1;
+  top: 110px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+html body .container .navBar .shoppingCart {
+  position: absolute;
+  margin: 45px 0 0 40vw;
+  list-style-type: none;
+  z-index: 2;
+}
+
+html body .container .navBar .shoppingCart .fa, html body .container .navBar .shoppingCart .fas {
+  text-decoration: none;
+  color: #646464;
+  font-size: 1.7rem;
+}
+
+html body .container .navBar .shoppingCart .cartItems {
+  position: absolute;
+  left: 37px;
+  top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  padding: auto;
+  height: 30px;
+  width: 35px;
+  border-radius: 15px;
+  background-color: #bebebe;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+html body .container .navBar .logo {
+  padding: 0;
+  position: absolute;
+  top: 27px;
+  right: 88vw;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  z-index: -1;
+}
+
+html body .container .navBar .logo .petColor {
+  color: #5b96a3;
+}
+
+html body .container .navBar .logo .letterL {
+  font-size: 1.5rem;
+}
+
+html body .container .brandsIcons {
+  position: relative;
+  margin: 0 10vw 0 10vw;
+  height: 50vh;
+  top: 200px;
+}
+
+html body .container .brandsIcons .cardsContainer {
+  padding: 0;
+  margin: 0 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+html body .container .brandsIcons .cardsContainer .card {
+  padding: 0 20px;
+  margin: 0 auto;
+  height: 220px;
+  width: 220px;
+  overflow: hidden;
+  border: 2px solid #bebebe;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html body .container .brandsIcons .cardsContainer .card img {
+  width: 220px;
+}
+
+html body .container .content {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 80vh;
+  height: 20%;
+  width: 100%;
+  overflow: hidden;
+}
+
+html body .container .content .socIcon {
+  position: absolute;
+  top: 8vh;
+  left: 10vw;
+  list-style-type: none;
+}
+
+html body .container .content .socIcon a {
+  margin-right: 1vh;
+  text-decoration: none;
+  color: #646464;
+  font-size: 1rem;
+}
+
+html body .container .content form {
+  position: absolute;
+  width: 300px;
+  display: block;
+  top: 3vh;
+  margin-left: 75%;
+  margin-right: 25%;
+  color: #646464;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+html body .container .content form input {
+  padding: 0.7em;
+  width: 270px;
+  border-style: none;
+  border-radius: 10px;
+}
+
+@-webkit-keyframes bone {
+  0% {
+    font-size: 1.2rem;
+  }
+  50% {
+    font-size: 1.3rem;
+  }
+  100% {
+    font-size: 1.2rem;
+  }
+}
+
+@keyframes bone {
+  0% {
+    font-size: 1.2rem;
+  }
+  50% {
+    font-size: 1.3rem;
+  }
+  100% {
+    font-size: 1.2rem;
+  }
+}
+/*# sourceMappingURL=brand.css.map */
